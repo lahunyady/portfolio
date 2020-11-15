@@ -3,10 +3,11 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
+import Projects from './components/pages/Projects';
+import CodingChallenges from './components/pages/CodingChallenges';
 import Footer from './components/Footer';
+import AboutMe from './components/pages/AboutMe';
+import Contact from './components/pages/Contact';
 
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
       <Navbar/>
       <Switch>
         <Route path='/' exact component={Home}/>
-        <Route path='/services' component={Services}/>
-        <Route path='/products' component={Products}/>
-        <Route path='/sign-up' component={SignUp}/>
+        <Route path='/about-me' component={AboutMe}/>
+        <Route path='/projects' component={Projects}/>
+        <Route path='/coding-challenges' component={CodingChallenges}/>
+        <Route path='/contact' component={Contact}/>
       </Switch>
       <Footer/>  
     </Router>
