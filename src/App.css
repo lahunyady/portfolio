@@ -6,9 +6,10 @@
   }
   
   .home,
-  .services,
-  .products,
-  .sign-up {
+  .projects,
+  .coding-challenges,
+  .about-me,
+  .contact{
     display: flex;
     height: 90vh;
     align-items: center;
@@ -16,8 +17,8 @@
     font-size: 3rem;
   }
   
-  .services {
-    background-image: url('/src/images/img-3.jpg');
+  .projects {
+    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-pixabay-268362.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,17 +26,26 @@
     font-size: 100px;
   }
   
-  .products {
-    background-image: url('/src/images/img-1.jpg');
+  .coding-challenges {
+    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-pixabay-262488.jpg');
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
     color: #fff;
     font-size: 100px;
   }
-  
-  .sign-up {
-    background-image: url('/src/images/img-8.jpg');
+
+  .about-me {
+    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-neosiam-595229.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+
+  .contact {
+    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-noah-erickson-404280.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
