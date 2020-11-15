@@ -23,22 +23,22 @@ function Navbar() {
                  <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                      <li className='nav-item'>
                          <Link to='/about-me' className='nav-links' onClick={closeMobileMenu}>
-                            About me 
+                            Rólam
                          </Link>
                     </li>
                     <li>
                          <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
-                             Projects
+                             Projektek
                          </Link>
                     </li>
                     <li>
                          <Link to='/coding-challenges' className='nav-links' onClick={closeMobileMenu}>
-                             Coding Challenges
+                             Kódolási feladatok
                          </Link>
                     </li>
                     <li>
                          <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>
-                             Contact me
+                             Kapcsolat
                          </Link>
                     </li>
                  </ul>

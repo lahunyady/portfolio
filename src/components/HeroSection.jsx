@@ -6,7 +6,7 @@ function HeroSection() {
     return (
         <div className='hero-container'>
             <h1>HUNYADY LÁSZLÓ</h1>
-            <p>Szoftverfejlesztő</p>
+            <p>Backend fejlesztő</p>
         </div>
     )
 }
