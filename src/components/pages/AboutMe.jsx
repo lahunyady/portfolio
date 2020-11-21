@@ -11,7 +11,7 @@ export default memo(function AboutMe() {
                     <div className="col-lg-4">
                     <CardItem
                         src='images/lhy.jpg'
-                        text={['A ',<a href="https://sigmatechnology.se/sigma-technology-hungary/" className="higlight">Sigma Technology</a>,' alkalmazottjaként dolgozok ',<a href="https://www.ericsson.com/en" className="higlight"> Ericsson</a>,' projekteken. Fontos számomra a kód tisztításával csökkenteni a szállítási időt, a folyamatos fejlődés és a fókusz.']}
+                        text={['A ', <a key="sigma" href="https://sigmatechnology.se/sigma-technology-hungary/" className="higlight">Sigma Technology</a>, ' alkalmazottjaként dolgozok ', <a key="ericsson" href="https://www.ericsson.com/en" className="higlight"> Ericsson</a>, ' projekteken. Fontos számomra a kód tisztításával csökkenteni a szállítási időt, a folyamatos fejlődés és a fókusz.']}
                         label='László Hunyady'
                     />
                     </div>
