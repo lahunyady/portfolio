@@ -11,17 +11,6 @@ function Footer() {
             
           </div>
           <div className='social-icons'>
-            <Link to='/' className='social-logo'>
-              <i className='fab fa-typo3' />
-            </Link>
-            <Link
-              className='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i className='fab fa-facebook-f' />
-            </Link>
             <Link
               className='social-icon-link linkedin'
               to='/'
@@ -29,6 +18,30 @@ function Footer() {
               aria-label='LinkedIn'
             >
               <i className='fab fa-linkedin' />
+            </Link>
+            <Link
+              className='social-icon-link github'
+              to='/'
+              target='_blank'
+              aria-label='Github'
+            >
+              <i className='fas fa-code-branch' />
+            </Link>
+            <Link
+              className='social-icon-link mobile'
+              to='/'
+              target='_blank'
+              aria-label='Mobile'
+            >
+              <i className='fas fa-mobile'/>
+            </Link>
+            <Link
+              className='social-icon-link mobile'
+              to='/'
+              target='_blank'
+              aria-label='Mobile'
+            >
+              <i className='fas fa-envelope-open'/>
             </Link>
           </div>
         </div>

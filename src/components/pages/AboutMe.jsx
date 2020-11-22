@@ -28,7 +28,7 @@ const options = {
                 },
                 ticks: {
                     max:100,
-                    min:0,
+                    min: 0,
                     stepSize: 25,
                     fontFamily: "'PT Sans'",
                     fontColor: "rgba(255,255,255,0.5)",
@@ -88,10 +88,7 @@ export default memo(function AboutMe() {
                             </div>
                         </div>
                     </div>
-                    
                 </div>
-            </div>
-            <div className="introduction">
             </div>
         </div>        
     )
