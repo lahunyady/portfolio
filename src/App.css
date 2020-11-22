@@ -56,3 +56,10 @@
     color: #fff;
     font-size: 100px;
   }
+
+  .rotated {
+    padding-top: 10px;
+    transform: rotate(330deg);
+    font-size: 16px;
+  }
+
