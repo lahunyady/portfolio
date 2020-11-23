@@ -1,6 +1,11 @@
 import React from 'react';
 import '../../App.css';
+import ChallengeCards from '../ChallengeCards';
 
-export default function CodingChallenged(){
-    return <h1 className="coding-challenges">CODING CHALLENGES</h1>;
+export default function CodingChallenges(){
+    return <>
+    <div className="coding-challenges">
+    <ChallengeCards/>
+</div>
+</>;
 }
