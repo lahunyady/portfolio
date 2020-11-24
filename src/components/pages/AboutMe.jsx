@@ -4,13 +4,13 @@ import '../../App.css';
 import CardItem from '../CardItem';
 
 const data = {
-    labels: ['Java', 'Spring', 'Git', 'Sql', 'NoSql', 'Maven', 'Docker'],
+    labels: ['Java', 'Spring', 'PostgreSQL', 'Elasticsearch', 'Git', 'Maven', 'Docker'],
     datasets: [
       {
         label: 'Skill level',
         backgroundColor: 'rgba(31,152,244,0.6)',
         hoverBackgroundColor: 'rgba(31,152,244,1)',
-        data: [85, 70, 60, 60, 45, 40, 30],
+        data: [85, 70, 60, 50, 50, 40, 30],
       }
     ]
   };
