@@ -5,9 +5,9 @@ function ChallengeCards() {
     return (
         <div className='cards'>
             <h1>Kódolási kihívások </h1>
-            <div class="container">
-              <div class="row">
-                <div class="col-sm">
+            <div className="container">
+              <div className="row">
+                <div className="col-sm">
                   <CardItem
                     src='images/img-9.jpg'
                     text='Explore the hidden waterfall deep inside the Amazon Jungle'
