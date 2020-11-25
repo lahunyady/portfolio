@@ -31,6 +31,10 @@ class EmailForm extends React.Component {
         </div>
       );
     }
+
+    resetForm(){
+      this.setState({name: "", email: "", message: ""})
+    }
   
     onNameChange(event) {
       this.setState({name: event.target.value})
@@ -44,7 +48,26 @@ class EmailForm extends React.Component {
       this.setState({message: event.target.value})
     }
   
-    handleSubmit(event) {
+    handleSubmit(e) {
+      e.preventDefault();
+    
+      fetch('http://localhost:3002/send', {
+          method: "POST",
+          body: JSON.stringify(this.state),
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+        }).then(
+        (response) => (response.json())
+          ).then((response)=> {
+        if (response === 'OK') {
+          console.log("ok");
+          this.resetForm()
+        } else  {
+          console.log("not ok");
+        }
+      })
     }
   }
   
