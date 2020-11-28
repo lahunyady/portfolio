@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import './EmailForm.css';
+import './../App.css';
 
 class EmailForm extends React.Component {
     constructor(props) {
@@ -12,23 +14,33 @@ class EmailForm extends React.Component {
   
     render() {
       return(
-        <div className="App">
+        <div className="container">
+          <div className="full-width">
+            <p>Vedd fel kapcsolatot velem!</p>
+          </div>
           <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" required="required" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
-            </div>
-            <div className="form-group">
-              <label htmlFor="exampleInputEmail1">Email address</label>
-              <input type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea className="form-control" required="required" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
-        </div>
+            <div className="row">
+              <div className="col-md-3 col-sm-12 offset-md-3">
+                <div className="form-group">
+                  <input placeholder="Név" type="text" required="required" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-12">
+                <div className="form-group">
+                    <input placeholder="Email" type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                </div>
+              </div>
+              <div className="col-md-6 col-sm-12 offset-md-3">
+                <div className="form-group">
+                  <textarea placeholder="Üzenet" className="form-control" required="required" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                </div>
+              </div>
+              <div className="full-width">
+                <button type="submit" className="btn btn-primary">Küldés</button>
+              </div>
+            </div>    
+        </form>
+      </div>
       );
     }
   
