@@ -16,7 +16,7 @@ class EmailForm extends React.Component {
           <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input type="text" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+              <input type="text" required="required" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
             </div>
             <div className="form-group">
               <label htmlFor="exampleInputEmail1">Email address</label>
@@ -24,18 +24,18 @@ class EmailForm extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea className="form-control" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+              <textarea className="form-control" required="required" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
         </div>
       );
     }
-
+  
     resetForm(){
       this.setState({name: "", email: "", message: ""})
     }
-  
+
     onNameChange(event) {
       this.setState({name: event.target.value})
     }
