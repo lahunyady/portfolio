@@ -22,7 +22,7 @@ const options = {
         scales: {
             xAxes: [{
                 gridLines: {
-                    color: "rgba(255,255,255,0.5)",
+                    color: "rgba(190,190,190,1)",
                     drawBorder: false,
                     drawTicks: false
                 },
@@ -31,7 +31,7 @@ const options = {
                     min: 0,
                     stepSize: 25,
                     fontFamily: "'PT Sans'",
-                    fontColor: "rgba(255,255,255,0.5)",
+                    fontColor: "#000",
                     padding: 15,
                     fontSize: 14,
                     callback: function(value, index, values) {
@@ -54,9 +54,13 @@ const options = {
             }],
             yAxes: [
                 {
+                    gridLines: {
+                        color: "rgba(190,190,190,0)",
+                        drawBorder: false,
+                    },
                     ticks: {
                         fontSize: 14,
-                        fontColor: "#fff",
+                        fontColor: "#000",
                         fontFamily: "'PT Sans'"
                     }
                 }

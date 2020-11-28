@@ -23,37 +23,37 @@
   }
   
   .projects {
-    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-pixabay-268362.jpg');
+    background-image: linear-gradient( rgba(240, 240, 240, 1.0), rgba(240, 240, 240, 0.8) ), url('/src/images/pexels-pixabay-268362.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #000;
     font-size: 100px;
   }
   
   .coding-challenges {
-    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-pixabay-262488.jpg');
+    background-image: linear-gradient( rgba(240, 240, 240, 1.0), rgba(240, 240, 240, 0.8) ), url('/src/images/pexels-pixabay-262488.jpg');
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #000;
     font-size: 100px;
   }
 
   .about-me {
-    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-neosiam-595229.jpg');
+    background-image: linear-gradient( rgba(240, 240, 240, 1.0), rgba(240, 240, 240, 0.8) ), url('/src/images/pexels-neosiam-595229.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #000;
     font-size: 20px;
   }
 
   .contact {
-    background-image: linear-gradient( rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0.9) ), url('/src/images/pexels-noah-erickson-404280.jpg');
+    background-image: linear-gradient( rgba(240, 240, 240, 1.0), rgba(240, 240, 240, 0.8) ), url('/src/images/pexels-noah-erickson-404280.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: #000;
     font-size: 100px;
   }
