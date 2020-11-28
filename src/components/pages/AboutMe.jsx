@@ -30,7 +30,7 @@ const options = {
                     max:100,
                     min: 0,
                     stepSize: 25,
-                    fontFamily: "'PT Sans'",
+                    fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif'",
                     fontColor: "#000",
                     padding: 15,
                     fontSize: 14,
