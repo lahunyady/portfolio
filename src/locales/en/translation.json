@@ -1,0 +1,29 @@
+{
+    "Title": "Backend Developer",
+    "Name": "LASZLO HUNYADY",
+
+    "About Me": "About Me",
+    "Projects": "Projects",
+    "Coding Challenges":"Coding Challenges",
+    "Contact": "Contact",
+
+    "Pre Sigma": "I am working for ",
+    "Post Sigma": "on",
+    "Post Ericsson": "projects. ",
+    "Motto": "My virtues are continous learning, keeping focus and reducing time to market by clening the code.",
+    "Skill level 0": "The what?",
+    "Skill level 1": "I can copy paste it",
+    "Skill level 2": "Daily use",
+    "Skill level 3": "Able to optimize",
+    "Skill level 4": "Know everything",
+    "Skill level Default": "",
+
+    "Projects Header": "Projects",
+
+    "Challenges Header": "Coding Challenges",
+
+    "Contact me form": "Contact me!",
+    "Name form": "Name",
+    "Message form": "Message",
+    "Send form": "Send"
+}

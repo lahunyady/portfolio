@@ -1,86 +1,76 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './EmailForm.css';
 import './../App.css';
+import { useTranslation } from "react-i18next";
 
-class EmailForm extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        name: '',
-        email: '',
-        message: ''
-      }
-    }
+
+function EmailForm() {
+  const { t } = useTranslation();
   
-    render() {
-      return(
+  const [formData, setFormData] = useState({});
+  const updateInput = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    fetch('http://localhost:3002/send', {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      })
+      .then((response) => (response.json()))
+      .then((response)=> {
+        if (response === 'OK') {
+          console.log("ok");
+          setFormData({
+            name: '',
+            email: '',
+            message: '',
+          })
+        } else  {
+          console.log("not ok");
+        }
+    })
+  }
+
+  return (<>
         <div className="container">
           <div className="full-width">
-            <p>Vedd fel kapcsolatot velem!</p>
+            <p>{t("Contact me form")}</p>
           </div>
-          <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+          <form id="contact-form" onSubmit={handleSubmit} method="POST">
             <div className="row">
               <div className="col-md-3 col-sm-12 offset-md-3">
                 <div className="form-group">
-                  <input placeholder="Név" type="text" required="required" className="form-control" value={this.state.name} onChange={this.onNameChange.bind(this)} />
+                  <input placeholder={t("Name form")} type="text" name="name" required="required" className="form-control" value={formData.name || ''} onChange={updateInput} />
                 </div>
               </div>
               <div className="col-md-3 col-sm-12">
                 <div className="form-group">
-                    <input placeholder="Email" type="email" className="form-control" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
+                    <input placeholder={t("Email form")} type="email" name="email" className="form-control" aria-describedby="emailHelp" value={formData.email || ''} onChange={updateInput} />
                 </div>
               </div>
               <div className="col-md-6 col-sm-12 offset-md-3">
                 <div className="form-group">
-                  <textarea placeholder="Üzenet" className="form-control" required="required" rows="5" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
+                  <textarea placeholder={t("Message form")} className="form-control" name="message" required="required" rows="5" value={formData.message || ''} onChange={updateInput} />
                 </div>
               </div>
               <div className="full-width">
-                <button type="submit" className="btn btn-primary">Küldés</button>
+                <button type="submit" className="btn btn-primary">{t("Send form")}</button>
               </div>
             </div>    
         </form>
       </div>
-      );
-    }
-  
-    resetForm(){
-      this.setState({name: "", email: "", message: ""})
-    }
-
-    onNameChange(event) {
-      this.setState({name: event.target.value})
-    }
-  
-    onEmailChange(event) {
-      this.setState({email: event.target.value})
-    }
-  
-    onMessageChange(event) {
-      this.setState({message: event.target.value})
-    }
-  
-    handleSubmit(e) {
-      e.preventDefault();
-    
-      fetch('http://localhost:3002/send', {
-          method: "POST",
-          body: JSON.stringify(this.state),
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-        }).then(
-        (response) => (response.json())
-          ).then((response)=> {
-        if (response === 'OK') {
-          console.log("ok");
-          this.resetForm()
-        } else  {
-          console.log("not ok");
-        }
-      })
-    }
-  }
+    </>
+  )
+}
   
   export default EmailForm;

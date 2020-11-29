@@ -1,0 +1,32 @@
+{
+    "Title": "Backend fejlesztő",
+    "Name": "HUNYADY LÁSZLÓ",
+    
+    "About Me": "Rólam",
+    "Projects": "Projektek",
+    "Coding Challenges":"Kódolási feladatok",
+    "Contact": "Kapcsolat",
+
+    "Pre Sigma": "A ",
+    "Post Sigma": "alkalmazottjaként dolgozok",
+    "Post Ericsson": "projekteken. ",
+    "Motto": "Fontos számomra a kód tisztításával csökkenteni a szállítási időt, a folyamatos fejlődés és a fókusz tartás. ",
+    "Skill level 0": "A micsoda?",
+    "Skill level 1": "Össze tudom ollózni",
+    "Skill level 2": "Napi szinten használom",
+    "Skill level 3": "Képes vagyok optimalizálni",
+    "Skill level 4": "Mindent tudok",
+    "Skill level Default": "",
+
+    "Projects Header": "Projektjeim",
+
+    "Challenges Header": "Kódolási kihívások",
+
+    "Contact me form": "Vedd fel a kapcsolatot velem!",
+    "Name form": "Név",
+    "Email form": "Email",
+    "Message form": "Üzenet",
+    "Send form": "Küldés"
+
+
+}

@@ -15,8 +15,8 @@
 }
 
 @media screen and (max-width: 760px) {
-.button-div{
-    padding: 0 15px;
-}
+    .button-div{
+        padding: 0 15px;
+    }
 }
 
