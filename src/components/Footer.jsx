@@ -1,52 +1,38 @@
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <section className='social-media'>
-        <div className='social-media-wrap'>
-          <div className='footer-logo'>
-            
+  
+      <>
+      <div className="container-fluid">
+        <div className="row align-items-center justify-content-center">
+          <div className="oracle col-4">
+            <p>Oracle Certified Java Professional</p>
+            <p>Backend Developer</p>
+            <img src={"images/02_Java-SE-11-Developer_Professional__1_.png"} alt="Logo" />
           </div>
-          <div className='social-icons'>
-            <Link
-              className='social-icon-link linkedin'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i className='fab fa-linkedin' />
-            </Link>
-            <Link
-              className='social-icon-link github'
-              to='/'
-              target='_blank'
-              aria-label='Github'
-            >
-              <i className='fas fa-code-branch' />
-            </Link>
-            <Link
-              className='social-icon-link mobile'
-              to='/'
-              target='_blank'
-              aria-label='Mobile'
-            >
-              <i className='fas fa-mobile'/>
-            </Link>
-            <Link
-              className='social-icon-link mobile'
-              to='/'
-              target='_blank'
-              aria-label='Mobile'
-            >
-              <i className='fas fa-envelope-open'/>
-            </Link>
+          
+          <div className="copyright col-lg-4 ">
+            <p>&copy; 2020-{new Date().getFullYear()} Copyright: László Hunyady. All rights reserved.</p>
           </div>
+          
+          <div className="col-lg-4 ">
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/laszlo-hunyady-40b355177/">LinkedIn</a>
+              <a href="https://github.com/lahunyady">Github</a>
+              <a href="/contact">Email</a>
+            </div>
+          </div>
+
         </div>
-      </section>
-    </div>
+
+
+      </div>
+          
+          
+       
+    </>
   );
 }
 

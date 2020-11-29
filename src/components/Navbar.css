@@ -1,6 +1,6 @@
 .navbar {
     background: linear-gradient(90deg, #828282 0%, #828282 100%);
-    height: 80px;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
     max-width: 1500px;
   }
     
@@ -56,6 +55,7 @@
     text-decoration: none;
     padding: 0.5rem 0.5rem;
     height: 100%;
+    margin: 5px;
   }
   
   .nav-links:hover {
