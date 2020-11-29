@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { HorizontalBar } from 'react-chartjs-2';
 import '../../App.css';
 import CardItem from '../CardItem';
+import { useTranslation } from "react-i18next";
 
 const data = {
     labels: ['Java', 'Spring', 'PostgreSQL', 'Elasticsearch', 'Git', 'Maven', 'Docker'],
@@ -15,60 +16,62 @@ const data = {
     ]
   };
 
-const options = {
-    legend: {display: false},
-    tooltips: {enabled: false},
-    hover: {mode: null},
-        scales: {
-            xAxes: [{
-                gridLines: {
-                    color: "rgba(190,190,190,1)",
-                    drawBorder: false,
-                    drawTicks: false
-                },
-                ticks: {
-                    max:100,
-                    min: 0,
-                    stepSize: 25,
-                    fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif'",
-                    fontColor: "#000",
-                    padding: 15,
-                    fontSize: 14,
-                    callback: function(value, index, values) {
-                        switch(value) {
-                            case 0: 
-                                return "A micsoda?";
-                            case 25:
-                              return "Össze tudom ollózni";
-                            case 50:
-                                return "Napi szinten használom";
-                            case 75:
-                                return "Képes vagyok optimalizálni";
-                            case 100:
-                                return "Mindent tudok";
-                            default:
-                                return "";
-                          }
-                    }
-                }
-            }],
-            yAxes: [
-                {
+export default memo(function AboutMe() {
+    const { t } = useTranslation();
+
+    const options = {
+        legend: {display: false},
+        tooltips: {enabled: false},
+        hover: {mode: null},
+            scales: {
+                xAxes: [{
                     gridLines: {
-                        color: "rgba(190,190,190,0)",
+                        color: "rgba(190,190,190,1)",
                         drawBorder: false,
+                        drawTicks: false
                     },
                     ticks: {
-                        fontSize: 14,
+                        max:100,
+                        min: 0,
+                        stepSize: 25,
+                        fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif'",
                         fontColor: "#000",
-                        fontFamily: "'PT Sans'"
+                        padding: 15,
+                        fontSize: 14,
+                        callback: function(value, index, values) {
+                            switch(value) {
+                                case 0: 
+                                    return t("Skill level 0")
+                                case 25:
+                                    return t("Skill level 1")
+                                case 50:
+                                    return t("Skill level 2")
+                                case 75:
+                                    return t("Skill level 3")
+                                case 100:
+                                    return t("Skill level 4")
+                                default:
+                                    return t("Skill level Default")
+                              }
+                        }
                     }
-                }
-            ]
-        }
-  }
+                }],
+                yAxes: [
+                    {
+                        gridLines: {
+                            color: "rgba(190,190,190,0)",
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            fontSize: 14,
+                            fontColor: "#000",
+                            fontFamily: "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+                        }
+                    }
+                ]
+            }
+      }
 
-export default memo(function AboutMe() {
     return (
         <div className="about-me">
             <div className="container">
@@ -76,7 +79,7 @@ export default memo(function AboutMe() {
                     <div className="col-lg-4 col-sm-12">
                         <CardItem
                             src='images/lhy.jpg'
-                            text={['A ', <a key="sigma" href="https://sigmatechnology.se/sigma-technology-hungary/" className="higlight">Sigma Technology</a>, ' alkalmazottjaként dolgozok ', <a key="ericsson" href="https://www.ericsson.com/en" className="higlight"> Ericsson</a>, ' projekteken. Fontos számomra a kód tisztításával csökkenteni a szállítási időt, a folyamatos fejlődés és a fókusz tartás.']}
+                            text={[t("Pre Sigma"), <a key="sigma" href="https://sigmatechnology.se/sigma-technology-hungary/" className="higlight">Sigma Technology </a>, t("Post Sigma"), <a key="ericsson" href="https://www.ericsson.com/en" className="higlight"> Ericsson </a>, t("Post Ericsson"),t("Motto")]}
                             label='László Hunyady'
                         />
                     </div>

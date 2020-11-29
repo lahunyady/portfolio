@@ -17,32 +17,32 @@
     height: 80px;
     max-width: 1500px;
   }
-  
-  .navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  .fa-typo3 {
+    
+  .fa-home {
     margin-left: 0.5rem;
     font-size: 1.8rem;
+  }
+
+  .custom-home-icon{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center
   }
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
     width: 60vw;
     justify-content: end;
     margin-right: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+
   }
   
   .nav-item {
@@ -54,13 +54,25 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     height: 100%;
   }
   
   .nav-links:hover {
     border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
+  }
+
+  /* Language select */
+  .nav-links:hover .MuiSelect-select{
+    color: #0056b3;
+    border-radius: 0;
+  }
+
+  /* arrow next to the language select */
+  .nav-links:hover .MuiSvgIcon-root{
+    color: #0056b3;
+    border-radius: 0;
   }
   
   .fa-bars {
@@ -73,6 +85,21 @@
   
   .menu-icon {
     display: none;
+  }
+
+  .navbar-logo {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-20%, 120%);
   }
   
   @media screen and (max-width: 960px) {
@@ -105,6 +132,7 @@
       padding: 2rem;
       width: 100%;
       display: table;
+      max-height: 6rem;
     }
   
     .nav-links:hover {
@@ -112,13 +140,18 @@
       color: #242424;
       border-radius: 0;
     }
-  
-    .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
+
+    /* Language select */
+    .nav-links:hover .MuiSelect-select{
+      color: #242424;
+      border-radius: 0;
     }
+
+    /* arrow next to the language select */
+    .nav-links:hover .MuiSvgIcon-root{
+      color: #242424;
+      border-radius: 0;
+    }    
   
     .menu-icon {
       display: block;
@@ -130,9 +163,13 @@
       cursor: pointer;
     }
   
-    .fa-times {
+    .fa-home {
       color: #fff;
-      font-size: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(100%, 120%);
+      font-size: 1.8rem;
     }
   
     .nav-links-mobile {

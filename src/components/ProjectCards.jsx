@@ -1,10 +1,12 @@
 import React from 'react'
 import CardItem from './CardItem';
+import { useTranslation } from "react-i18next";
 
 function ProjectCards() {
+  const { t } = useTranslation();
     return (
         <div className='cards'>
-            <h1>Korábbi projektjeim </h1>
+            <h1> {t("Projects Header")} </h1>
             <div className="container">
               <div className="row">
                 <div className="col-sm">
