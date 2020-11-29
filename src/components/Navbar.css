@@ -55,6 +55,7 @@
     text-decoration: none;
     padding: 0.5rem 0.5rem;
     height: 100%;
+    margin: 5px;
   }
   
   .nav-links:hover {
