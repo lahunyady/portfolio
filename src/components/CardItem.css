@@ -5,6 +5,10 @@
   h1 {
     text-align: center;
   }
+
+  a {
+    color: #1f98f4;
+  }
   
   .cards__item__pic-wrap {
     position: relative;
