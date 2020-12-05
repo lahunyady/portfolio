@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 function LanguageSwitcher() {
     const classes = useStyles();
-    const [loc, setLoc] = React.useState('hun');
+    const [loc, setLoc] = React.useState('hu');
     const { i18n } = useTranslation();
     const handleChange = (e) => {
         i18n.changeLanguage(e.target.value);
@@ -40,7 +40,7 @@ function LanguageSwitcher() {
             }}
         >
             <MenuItem value={"en"}>EN</MenuItem>
-            <MenuItem value={"hun"}>HU</MenuItem>
+            <MenuItem value={"hu"}>HU</MenuItem>
         </Select>
     </FormControl>
   );}

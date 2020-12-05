@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './EmailForm.css';
 import './../App.css';
 import { useTranslation } from "react-i18next";
+import i18n from 'i18next';
 
 
 function EmailForm() {
@@ -11,6 +12,7 @@ function EmailForm() {
   const updateInput = e => {
     setFormData({
       ...formData,
+      languageCode: i18n.language,
       [e.target.name]: e.target.value,
     })
   };
@@ -34,6 +36,7 @@ function EmailForm() {
             name: '',
             email: '',
             message: '',
+            languageCode: '',
           })
         } else  {
           console.log("not ok");
