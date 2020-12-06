@@ -1,31 +1,72 @@
-.container-fluid{
-    padding: 3rem 2rem 2rem 2rem;
-    color: #fff;  
-    background-color: #828282;
-    align-items: center;
-    display: flex;
-    text-align: center;
-}
-
-.oracle{
-    padding: 0 0 2rem 0;
-}
-
-
-.row {
+.footer {
     width: 100%;
+    background: linear-gradient(90deg, #828282 0%, #828282 100%);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding:2rem 2rem 1rem 2rem;
 }
 
-img {
-    width:200px;
+.personal{
+    display:flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.footer-paragraph{
+    margin:0px;
+}
+
+.footer-link{
+    color:white;
+}
+
+.title{
+    text-align: center;
+    padding:0.5rem;
+}
+
+img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.badges{
+    width: 170px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.social{
+    width:10rem;
+    justify-content:space-between;
+    display:flex;
+    padding:8px;
+}
+
+.copyright{
+    text-align:center;
+}
+
+.copyright-text{
+    margin:0px;
+}
+
+/* Landscape phones and down */
+@media (max-width: 520px) { 
+    .personal{
+        flex-flow: column;
+    }
     
-}
+ }
 
-p {
-    margin: 0;
-}
-
-.social-links > a{
-    color: #fff;
-    margin: 5px;
-}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    .footer-content{
+        flex-flow: column;
+    }
+ }
